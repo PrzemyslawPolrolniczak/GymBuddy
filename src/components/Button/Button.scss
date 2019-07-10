@@ -1,0 +1,9 @@
+@import "../../assets/styles/palette.scss";
+
+.selected,
+.selected:hover {
+  background-color: $c-dark;
+  color: $c-blue-100;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
