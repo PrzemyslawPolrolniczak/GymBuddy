@@ -9,7 +9,7 @@ const Home: React.FC = () => {
     <React.Fragment>
       <DzikPoints />
       <Slider />
-      <Radio />
+      <Radio options={['Set 1', 'Set 2']} />
       <Button customClasses="w-full block border-b-4 bg-blue-500 hover:bg-blue-400 border-blue-700 hover:border-blue-500 rounded">
         Start Workout
       </Button>

@@ -1,0 +1,63 @@
+@mixin show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@mixin hide($moveToX: 0, $moveToY: 0) {
+    opacity: 0;
+    transform: translate($moveToX, $moveToY);
+}
+
+@keyframes appear-right-to-left {
+    0% {
+        @include hide(-100px);
+    }
+    100% {
+        @include show();
+    }
+}
+
+@keyframes disappear-to-left {
+    0% {
+        @include show();
+    }
+    100% {
+        @include hide(100px);
+    }
+}
+
+@keyframes appear-left-to-right {
+    0% {
+        @include hide(100px);
+    }
+    100% {
+        @include show();
+    }
+}
+
+@keyframes disappear-to-right {
+    0% {
+        @include show();
+    }
+    100% {
+        @include hide(-100px);
+    }
+}
+
+.slide {
+    &__appear--right-to-left {
+        animation: appear-right-to-left 1s both;
+    }
+
+    &__disappear--right-to-left {
+        animation: disappear-to-left 1s both;
+    }
+
+    &__appear--left-to-right {
+        animation: appear-left-to-right 1s both;
+    }
+
+    &__disappear--left-to-right {
+        animation: disappear-to-right 1s both;
+    }
+}

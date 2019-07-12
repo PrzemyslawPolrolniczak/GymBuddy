@@ -14,33 +14,47 @@ const slides: Slide[] = [
   { id: 3, title: "Zrzucone kilogramy", value: "0" }
 ];
 
+enum Direction {
+  Left = "left",
+  Right = "right",
+  LeftToRight = "left-to-right",
+  RightToLeft = "right-to-left"
+}
+
 const Slider: React.FC = () => {
   const [activeSlide, setSlide] = useState(1);
+  const [currentAnimation, setAnimation] = useState("appear");
+
+  const animate = (direction: Direction, slideToSet): void => {
+    setAnimation(`disappear--${direction}`);
+    setTimeout(() => {
+      setSlide(slideToSet);
+      setAnimation(`appear--${direction}`);
+    }, 1000)
+  }
 
   const handleSlideChange = (direction: string): void => {
     const { length } = slides;
-    if (direction === "left" && activeSlide === 0) {
-      setSlide(length - 1);
-    } else if (direction !== "left" && activeSlide === length - 1) {
-      setSlide(0);
-    } else {
-      direction === "left"
-        ? setSlide(activeSlide - 1)
-        : setSlide(activeSlide + 1);
+    if (direction === Direction.Left) {
+      const slideToSet = activeSlide === 0 ? length - 1 : activeSlide - 1;
+      animate(Direction.LeftToRight, slideToSet);
+    } else if (direction === Direction.Right) {
+      const slideToSet = activeSlide === length - 1 ? 0 : activeSlide + 1;
+      animate(Direction.RightToLeft, slideToSet);
     }
   };
 
   return (
     <div className="mb-4 relative">
       <div
-        className="absolute left-0"
-        onClick={() => handleSlideChange("left")}
+        className="absolute left-0 z-10"
+        onClick={() => handleSlideChange(Direction.Left)}
       >
         &lt;
       </div>
       <div
-        className="absolute right-0"
-        onClick={() => handleSlideChange("right")}
+        className="absolute right-0 z-10"
+        onClick={() => handleSlideChange(Direction.Right)}
       >
         &gt;
       </div>
@@ -48,7 +62,7 @@ const Slider: React.FC = () => {
         const { id, title, value } = slide;
         return (
           id === activeSlide && (
-            <InfoSlide title={title} value={value} key={id} />
+            <InfoSlide title={title} value={value} key={id} animation={currentAnimation} />
           )
         );
       })}
