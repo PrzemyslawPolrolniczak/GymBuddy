@@ -1,0 +1,9 @@
+.select {
+    &__options {
+        top: 110%;
+    }
+
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
+}

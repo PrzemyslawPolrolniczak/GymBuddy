@@ -13,7 +13,7 @@ const InfoSlide: React.FC<InfoSlideProps> = props => {
     <div className={`text-center slide__${animation}`}>
       <h1 className="mb-4">{title}</h1>
       <div className="flex items-center justify-center mb-4 relative">
-        <div className="flex items-center justify-center border border-solid border-blue-300 h-40 w-40 rounded-full">
+        <div className="flex items-center justify-center border-2 border-solid border-main-200 h-40 w-40 rounded-full">
           <h1 className="text-xl">{value}</h1>
         </div>
       </div>

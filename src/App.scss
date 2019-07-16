@@ -1,4 +1,9 @@
+@import './assets/styles/palette.scss';
+
 .App {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: $c-dark;
+}
+
+* {
+  color: $c-white;
 }

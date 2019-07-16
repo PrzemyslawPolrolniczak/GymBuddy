@@ -7,13 +7,14 @@ import Benchpress from "../assets/images/benchpress.jpg";
 
 const Home: React.FC = () => {
   return (
-    <React.Fragment>
-      <div>Workout</div>
+    <div className="w-full">
       <Link to="warmup/">
         <Tile text="Warmup" image={Warmup} />
       </Link>
-      <Tile text="Bench press" image={Benchpress} />
-    </React.Fragment>
+      <Link to="training/">
+        <Tile text="Training" image={Benchpress} />
+      </Link>
+    </div>
   );
 };
 

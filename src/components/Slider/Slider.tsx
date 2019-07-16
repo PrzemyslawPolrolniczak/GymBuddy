@@ -47,13 +47,13 @@ const Slider: React.FC = () => {
   return (
     <div className="mb-4 relative">
       <div
-        className="absolute left-0 z-10"
+        className="absolute left-0 z-10 select-none"
         onClick={() => handleSlideChange(Direction.Left)}
       >
         &lt;
       </div>
       <div
-        className="absolute right-0 z-10"
+        className="absolute right-0 z-10 select-none"
         onClick={() => handleSlideChange(Direction.Right)}
       >
         &gt;
