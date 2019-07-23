@@ -5,6 +5,7 @@ interface ButtonType {
   customClasses?: String;
   selected?: boolean;
   onClick?: any;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonType> = props => {
@@ -12,10 +13,11 @@ const Button: React.FC<ButtonType> = props => {
 
   return (
     <button
-      className={`text-white font-bold py-2 px-4 btn relative ${customClasses} ${
+      className={`button text-white font-bold py-2 px-4 btn relative ${customClasses} ${
         props.selected ? "selected" : ""
       }`}
       onClick={props.onClick}
+      disabled={props.disabled}
     >
       {props.children}
     </button>

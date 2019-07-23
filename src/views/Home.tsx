@@ -26,7 +26,7 @@ const Home: React.FC = () => {
       </div>
       <div>
         <Link to="/workout/">
-          <Button customClasses="w-full block bg-main-300 hover:bg-blue-500 rounded">
+          <Button customClasses="w-full block bg-main-300 hover:bg-blue-500 rounded" disabled={selectedOption ? false : true}>
             Start Workout
           </Button>
         </Link>
