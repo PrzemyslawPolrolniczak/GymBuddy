@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "../components/Button/Button";
-import DzikPoints from "../components/DzikPoints/DzikPoints";
-import Slider from "../components/Slider/Slider";
-import Select from "../components/Select/Select";
+import Button from "../../components/Button/Button";
+import DzikPoints from "../../components/DzikPoints/DzikPoints";
+import Slider from "../../components/Slider/Slider";
+import Select from "../../components/Select/Select";
 
 const trainingOptions = [
   {id: 'fbw-saker-a', text: "Saker FBW - Trening A"},

@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
 import "./App.scss";
 import store from './store';
-import Home from "./views/Home";
-import Workout from "./views/Workout";
-import Warmup from "./views/Warmup";
+import Home from "./views/Home/Home";
+import Workout from "./views/Workout/Workout";
+import Warmup from "./views/Warmup/Warmup";
 
 const App: React.FC = () => {
   return (

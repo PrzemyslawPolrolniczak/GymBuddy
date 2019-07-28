@@ -2,13 +2,23 @@
 
 .tile {
   &__overlay {
+    transition: all 0.8s;
     color: $c-white;
     background: linear-gradient(
       to right,
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.87) 23%,
       rgba(0, 0, 0, 0.83) 29%,
-      rgba(0, 0, 0, 0.43) 100%
+      rgba(0, 0, 0, 0.23) 100%
     );
+  }
+
+  &__desktop {
+    transition: border 0.5s;
+    border: 33px solid black;
+
+    &:hover {
+      border: 1px solid black;
+    }
   }
 }
