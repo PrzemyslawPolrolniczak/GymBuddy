@@ -7,6 +7,9 @@ module.exports = {
           '200': '#80a4ed',
           '300': '#5586e7'
         }
+      },
+      boxShadow: {
+        white: '0 1px 3px 0 rgba(255, 255, 255, .1), 0 1px 2px 0 rgba(255, 255, 255, .06)'
       }
     }
   },

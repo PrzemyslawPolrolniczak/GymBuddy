@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Provider } from 'react-redux';
+import { Provider } from "react-redux";
 import "./App.scss";
-import store from './store';
+import store from "./store";
 import Home from "./views/Home/Home";
 import Workout from "./views/Workout/Workout";
 import Warmup from "./views/Warmup/Warmup";
+import Exercise from "./views/Exercise/Exercise";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Route path="/" exact component={Home} />
           <Route path="/workout/" exact component={Workout} />
           <Route path="/workout/warmup/" exact component={Warmup} />
+          <Route path="*/exercise" component={Exercise} />
         </Provider>
       </Router>
     </div>

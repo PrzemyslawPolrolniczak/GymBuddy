@@ -19,7 +19,7 @@ const Warmup: React.FC = () => {
   return (
     <div className="w-full">
       {warmupRoutine.map(({ id, name }) => (
-        <Link to="exercise/" key={id}>
+        <Link to="exercise/" key={id} params={name}>
           <div className="mt-2 mb-2">
             <SubTile name={name} />
           </div>

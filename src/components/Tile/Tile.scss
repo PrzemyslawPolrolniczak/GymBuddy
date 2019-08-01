@@ -6,10 +6,10 @@
     color: $c-white;
     background: linear-gradient(
       to right,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.87) 23%,
-      rgba(0, 0, 0, 0.83) 29%,
-      rgba(0, 0, 0, 0.23) 100%
+      rgba($c-blue-300, 1) 0%,
+      rgba($c-blue-300, 0.77) 23%,
+      rgba($c-blue-300, 0.53) 40%,
+      rgba($c-blue-300, 0) 100%
     );
   }
 

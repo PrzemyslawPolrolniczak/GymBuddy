@@ -18,7 +18,7 @@ const Select: React.FC<SelectProps> = (props) => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className={`select p-3 relative flex justify-between border border-solid rounded ${selected ? 'border-main-200 text-main-300' : 'border-white'}`} onClick={() => {setOpen(!isOpen)}}>
+    <div className={`select p-3 relative flex justify-between border border-solid rounded ${selected ? 'border-main-200 text-main-200' : 'border-white'}`} onClick={() => {setOpen(!isOpen)}}>
         {selected || placeholder}
         <span className={isOpen ? 'rotate-180' : ''}>&#9660;</span>
         <div className={`select__options absolute pt-2 pb-2 left-0 right-0 border border-white border-solid rounded ${isOpen ? '' : 'hidden'}`}>
