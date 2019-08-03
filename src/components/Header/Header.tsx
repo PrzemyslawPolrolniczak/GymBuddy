@@ -9,7 +9,7 @@ const Header: React.FC<HeaderProps> = props => {
   const { text } = props;
   return (
     <header className="fixed top-0 left-0 right-0 p-4 shadow-white">
-      <h1 className="text-xl">{text}</h1>
+      <h1 className="text-xl capitalize">{text}</h1>
     </header>
   );
 };
