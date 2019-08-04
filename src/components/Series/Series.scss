@@ -1,0 +1,20 @@
+.series {
+  @apply flex w-full mt-3 border border-solid rounded border-black;
+
+  &__count {
+    @apply p-3 w-4/6;
+  }
+}
+
+.entry {
+  @apply w-1/6 text-center bg-transparent border-l border-black relative;
+
+  &__input {
+    @apply w-full h-full bg-transparent border-l border-black text-center;
+  }
+
+  &__description {
+    @apply absolute text-xxs top-0;
+    left: 0.25rem;
+  }
+}

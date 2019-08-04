@@ -140,6 +140,7 @@
     ]
   },
   "devDependencies": {
-    "redux-devtools": "^3.5.0"
+    "redux-devtools": "^3.5.0",
+    "stylelint-config-recommended": "^2.2.0"
   }
 }
