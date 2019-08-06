@@ -1,8 +1,5 @@
 module.exports = {
   theme: {
-    fontSize: {
-      xxs: ".65rem"
-    },
     // inset: {
     //   "1": "1rem"
     // },
@@ -13,6 +10,9 @@ module.exports = {
           "200": "#80a4ed",
           "300": "#5586e7"
         }
+      },
+      fontSize: {
+        xxs: ".65rem"
       },
       boxShadow: {
         white:

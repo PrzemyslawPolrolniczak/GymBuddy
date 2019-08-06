@@ -2,29 +2,39 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SubTile from "../../components/SubTile/SubTile";
 
-const warmupRoutine = [
-  { id: 1, name: "threadmill" },
-  { id: 2, name: "arms circling" },
-  { id: 3, name: "arms swinging left-right" },
-  { id: 4, name: "arms swinging up-down" },
-  { id: 5, name: "elbows circling" },
-  { id: 6, name: "wrists circling" },
-  { id: 7, name: "trunk rotation" },
-  { id: 8, name: "leg swing forward-backward" },
-  { id: 9, name: "leg swing sideways" },
-  { id: 10, name: "ankle mobilization" }
+interface Exercise {
+  name: string;
+  series: number;
+  time?: string;
+  reps?: number;
+}
+
+const warmupRoutine: Exercise[] = [
+  { name: "threadmill", series: 1, time: "5 min" },
+  { name: "arms circling", series: 1, reps: 15 },
+  { name: "arms swinging left-right", series: 1 },
+  { name: "arms swinging up-down", series: 1 },
+  { name: "elbows circling", series: 1 },
+  { name: "wrists circling", series: 1 },
+  { name: "trunk rotation", series: 1 },
+  { name: "leg swing forward-backward", series: 1 },
+  { name: "leg swing sideways", series: 1 },
+  { name: "ankle mobilization", series: 1 }
 ];
 
 const Warmup: React.FC = () => {
   return (
     <div className="w-full">
-      {warmupRoutine.map(({ id, name }) => (
+      {warmupRoutine.map(({ name, series, reps, time }) => (
         <Link
-          key={id}
+          key={name}
           to={{
             pathname: "exercise/",
             state: {
-              name
+              name,
+              series,
+              reps,
+              time
             }
           }}
         >

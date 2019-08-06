@@ -1,8 +1,20 @@
 .series {
-  @apply flex w-full mt-3 border border-solid rounded border-black;
+  @apply flex w-full mt-2 border border-solid rounded border-black;
 
   &__count {
-    @apply p-3 w-4/6;
+    @apply p-3 w-4/6 flex;
+  }
+
+  &__icon {
+    @apply text-xs ml-2 border rounded-full bg-green-500 w-4 h-4 flex justify-center content-center;
+  }
+
+  &--done {
+    @apply border-green-500;
+
+    .entry__input {
+      @apply border-green-500;
+    }
   }
 }
 
