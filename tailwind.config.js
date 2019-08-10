@@ -1,8 +1,5 @@
 module.exports = {
   theme: {
-    // inset: {
-    //   "1": "1rem"
-    // },
     extend: {
       colors: {
         main: {

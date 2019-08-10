@@ -1,0 +1,13 @@
+.home {
+  @apply w-full flex flex-col justify-between;
+
+  &__select {
+    @apply border border-solid rounded border-white;
+
+    &[class$="--selected"],
+    [class$="--selected"] {
+      @apply text-main-300;
+      @apply border-main-200;
+    }
+  }
+}

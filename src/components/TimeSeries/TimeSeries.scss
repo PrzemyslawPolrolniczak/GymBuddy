@@ -1,0 +1,36 @@
+.series {
+  @apply flex w-full mt-2 border border-solid rounded border-black;
+
+  &__count {
+    @apply p-3 w-4/6 flex;
+  }
+
+  &__icon {
+    @apply text-xs ml-2 border rounded-full bg-green-500 w-4 h-4 flex justify-center content-center;
+  }
+}
+
+.entry {
+  @apply w-1/6 text-center bg-transparent border-l border-black relative;
+
+  &__input {
+    @apply w-full h-full bg-transparent border-l border-black text-center;
+  }
+
+  &__description {
+    @apply absolute text-xxs top-0;
+    left: 0.25rem;
+  }
+
+  &__select {
+    @apply border-l border-solid border-black h-full;
+
+    [class$="--selected"] {
+      @apply text-green-500;
+    }
+  }
+}
+
+.series--done {
+  @apply border-green-500;
+}

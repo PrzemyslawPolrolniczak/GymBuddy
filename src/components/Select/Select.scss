@@ -1,9 +1,21 @@
 .select {
-    &__options {
-        top: 110%;
-    }
+  @apply p-3 relative flex justify-between;
 
-    .rotate-180 {
-        transform: rotate(180deg);
-    }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+}
+
+.options {
+  @apply absolute pt-2 pb-2 left-0 right-0 border border-white border-solid;
+  top: 110%;
+
+  &--top {
+    top: auto;
+    bottom: 110%;
+  }
+
+  &__option {
+    @apply p-2;
+  }
 }
